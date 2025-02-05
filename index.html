@@ -7,15 +7,54 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <script src="script.js"></script>
     <h1>Wordle (but not)</h1>
     <div class="grid">
         <div class="row">
-            <div class="tile correct">T</div>
-            <div class="tile present">E</div>
-            <div class="tile absent">S</div>
-            <div class="tile">T</div>
-            <div class="tile"></div>
+            <div class="tile" id="tile1-0"></div>
+            <div class="tile" id="tile1-1"></div>
+            <div class="tile" id="tile1-2"></div>
+            <div class="tile" id="tile1-3"></div>
+            <div class="tile" id="tile1-4"></div>
+        </div>
+        <div class="row">
+            <div class="tile" id="tile2-0"></div>
+            <div class="tile" id="tile2-1"></div>
+            <div class="tile" id="tile2-2"></div>
+            <div class="tile" id="tile2-3"></div>
+            <div class="tile" id="tile2-4"></div>
+        </div>
+        <div class="row">
+            <div class="tile" id="tile3-0"></div>
+            <div class="tile" id="tile3-1"></div>
+            <div class="tile" id="tile3-2"></div>
+            <div class="tile" id="tile3-3"></div>
+            <div class="tile" id="tile3-4"></div>
+        </div>
+        <div class="row">
+            <div class="tile" id="tile4-0"></div>
+            <div class="tile" id="tile4-1"></div>
+            <div class="tile" id="tile4-2"></div>
+            <div class="tile" id="tile4-3"></div>
+            <div class="tile" id="tile4-4"></div>
+        </div>
+        <div class="row">
+            <div class="tile" id="tile5-0"></div>
+            <div class="tile" id="tile5-1"></div>
+            <div class="tile" id="tile5-2"></div>
+            <div class="tile" id="tile5-3"></div>
+            <div class="tile" id="tile5-4"></div>
+        </div>
+        <div class="row">
+            <div class="tile" id="tile6-0"></div>
+            <div class="tile" id="tile6-1"></div>
+            <div class="tile" id="tile6-2"></div>
+            <div class="tile" id="tile6-3"></div>
+            <div class="tile" id="tile6-4"></div>
         </div>
     </div>
+    <br>
+    <input id="guess" type="text" maxlength="5">
+    <button onclick="submit()">Submit</button>
 </body>
 </html>

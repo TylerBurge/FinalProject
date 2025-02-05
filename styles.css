@@ -37,3 +37,8 @@ body {
 .absent {
     background-color: grey;
 }
+
+#guess {
+    text-transform: uppercase;
+    text-align: center;
+}
