@@ -21,7 +21,7 @@ function submit() {
         attempts += 1;
     }
     if (guess === word) {
-        alert("You Win!")
+        //alert("You Win!")
     }
 }
 
