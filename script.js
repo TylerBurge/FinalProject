@@ -13,10 +13,13 @@ function submit() {
             tile.innerHTML = guess[i].toUpperCase();
             if (guess[i] === word[i]) {
                 tile.classList.add("correct");
+                document.getElementById(guess[i]).classList.add("correct");
             } else if (word.includes(guess[i])) {
                 tile.classList.add("present");
+                document.getElementById(guess[i]).classList.add("present");
             } else {
                 tile.classList.add("absent");
+                document.getElementById(guess[i]).classList.add("absent");
             }
         }
         attempts += 1;
@@ -26,12 +29,13 @@ function submit() {
     }
 }
 
+// runs on startup
 document.addEventListener("DOMContentLoaded", function () {
     fetch("sorted_words.txt")
         .then(response => response.text())
         .then(text => {
             text.split(/\r?\n/).forEach(word => wordList.add(word.trim()));
-            //console.log(wordList);
+            console.log(wordList);
             word = [...wordList][Math.floor(Math.random() * wordList.size)];
             console.log(word);
         });

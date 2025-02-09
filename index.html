@@ -11,7 +11,7 @@
 <body>
     <script src="script.js"></script>
     <h1>Wordle (but not)</h1>
-    <div class="grid">
+    <div class="grid" style="margin-bottom: 20px;">
         <div class="row">
             <div class="tile" id="tile1-0"></div>
             <div class="tile" id="tile1-1"></div>
@@ -55,7 +55,6 @@
             <div class="tile" id="tile6-4"></div>
         </div>
     </div>
-    <br>
     <input id="guess" type="text" maxlength="5" autocomplete="off">
     <script>
         document.getElementById("guess").addEventListener("keypress", function (event) {
@@ -64,7 +63,44 @@
             }
         });
     </script>
-    <button onclick="submit()">Submit</button>
+    <button onclick="submit()" style="margin-bottom: 20px;">Submit</button>
+    <div class="grid">
+        <div class="row">
+            <div class="keyboard" id="q">Q</div>
+            <div class="keyboard" id="w">W</div>
+            <div class="keyboard" id="e">E</div>
+            <div class="keyboard" id="r">R</div>
+            <div class="keyboard" id="t">T</div>
+            <div class="keyboard" id="y">Y</div>
+            <div class="keyboard" id="u">U</div>
+            <div class="keyboard" id="i">I</div>
+            <div class="keyboard" id="o">O</div>
+            <div class="keyboard" id="p">P</div>
+        </div>
+        <div class="row">
+            <div class="keyboard" id="a">A</div>
+            <div class="keyboard" id="s">S</div>
+            <div class="keyboard" id="d">D</div>
+            <div class="keyboard" id="f">F</div>
+            <div class="keyboard" id="g">G</div>
+            <div class="keyboard" id="h">H</div>
+            <div class="keyboard" id="j">J</div>
+            <div class="keyboard" id="k">K</div>
+            <div class="keyboard" id="l">L</div>
+        </div>
+        <div class="row">
+            <div class="keyboard" id="enter"style="width: 50px; font-size: 1rem">Enter</div>
+            <div class="keyboard" id="z">Z</div>
+            <div class="keyboard" id="x">X</div>
+            <div class="keyboard" id="c">C</div>
+            <div class="keyboard" id="v">V</div>
+            <div class="keyboard" id="b">B</div>
+            <div class="keyboard" id="n">N</div>
+            <div class="keyboard" id="m">M</div>
+            <div class="keyboard" id="del"style="width: 50px; font-size: 1rem">Del</div>
+            
+        </div>
+    </div>
 </body>
 
 </html>
