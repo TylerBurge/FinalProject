@@ -40,3 +40,37 @@ document.addEventListener("DOMContentLoaded", function () {
             console.log(word);
         });
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+    const inputField = document.getElementById("guess");
+
+    document.querySelectorAll(".keyboard").forEach(key => {
+        key.addEventListener("click", () => {
+            const keyPressed = key.id;
+
+            if (keyPressed === "enter") {
+                submit();
+            } else if (keyPressed === "del") {
+                inputField.value = inputField.value.slice(0, -1);
+            } else {
+                if (inputField.value.length < 5) {
+                    inputField.value += keyPressed.toUpperCase();
+                }
+            }
+        });
+    });
+
+    document.addEventListener("keydown", (event) => {
+        const keyPressed = event.key.toLowerCase();
+    
+        if (keyPressed === "enter") {
+            submit();
+        } else if (keyPressed === "backspace") {
+            inputField.value = inputField.value.slice(0, -1);
+        } else if (/^[a-z]$/.test(keyPressed)) { 
+            if (inputField.value.length < 5) {
+                inputField.value += keyPressed.toUpperCase();
+            }
+        }
+    });
+});
