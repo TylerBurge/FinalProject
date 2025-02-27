@@ -1,11 +1,12 @@
 var word = "brave";
-var wordList = new Set();
+var all_words = new Set();
+var some_words = new Set();
 let attempts = 1;
 
 function submit() {
     let guess = document.getElementById("guess").value.toLowerCase();
     document.getElementById("guess").value = "";
-    if (!wordList.has(guess)) {
+    if (!all_words.has(guess)) {
         alert("Invalid Guess");
     } else {
         for (let i = 0; i < 5; i++) {
@@ -31,14 +32,15 @@ function submit() {
 
 // runs on startup
 document.addEventListener("DOMContentLoaded", function () {
-    fetch("sorted_words.txt")
-        .then(response => response.text())
-        .then(text => {
-            text.split(/\r?\n/).forEach(word => wordList.add(word.trim()));
-            console.log(wordList);
-            word = [...wordList][Math.floor(Math.random() * wordList.size)];
-            console.log(word);
-        });
+    Promise.all([
+        fetch("all_words.txt").then(response => response.text()),
+        fetch("some_words.txt").then(response => response.text())
+    ]).then(([allText, someText]) => {
+        allText.split(/\r?\n/).forEach(word => all_words.add(word.trim()));
+        someText.split(/\r?\n/).forEach(word => some_words.add(word.trim()));
+        word = [...some_words][Math.floor(Math.random() * some_words.size)];
+        console.log(word);
+    });
 });
 
 document.addEventListener("DOMContentLoaded", () => {
