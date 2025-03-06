@@ -9,20 +9,40 @@ function submit() {
     if (!all_words.has(guess)) {
         alert("Invalid Guess");
     } else {
+        let letterCounts = {};
+        for (let letter of word) {
+            letterCounts[letter] = (letterCounts[letter] || 0) + 1;
+        }
+
+        let matched = new Array(5).fill(false);
+
+        // First pass: Mark correct (green) letters
         for (let i = 0; i < 5; i++) {
             const tile = document.getElementById("tile" + attempts + "-" + i);
             tile.innerHTML = guess[i].toUpperCase();
             if (guess[i] === word[i]) {
                 tile.classList.add("correct");
                 document.getElementById(guess[i]).classList.add("correct");
-            } else if (word.includes(guess[i])) {
-                tile.classList.add("present");
-                document.getElementById(guess[i]).classList.add("present");
-            } else {
-                tile.classList.add("absent");
-                document.getElementById(guess[i]).classList.add("absent");
+                letterCounts[guess[i]]--;
+                matched[i] = true;
             }
         }
+
+        // Second pass: Mark misplaced (yellow) letters
+        for (let i = 0; i < 5; i++) {
+            if (!matched[i]) {
+                const tile = document.getElementById("tile" + attempts + "-" + i);
+                if (letterCounts[guess[i]] > 0) {
+                    tile.classList.add("present");
+                    document.getElementById(guess[i]).classList.add("present");
+                    letterCounts[guess[i]]--;
+                } else {
+                    tile.classList.add("absent");
+                    document.getElementById(guess[i]).classList.add("absent");
+                }
+            }
+        }
+
         attempts += 1;
     }
     if (guess === word) {
