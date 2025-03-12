@@ -27,16 +27,16 @@ body {
     border: 2px solid white;
 }
 
-.correct {
-    background-color: green;
+.absent {
+    background-color: grey;
 }
 
 .present {
     background-color: gold;
 }
 
-.absent {
-    background-color: grey;
+.correct {
+    background-color: green;
 }
 
 #guess {
