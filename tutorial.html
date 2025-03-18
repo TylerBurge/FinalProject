@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wordle (but not)</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <script src="script.js"></script>
+    <a href="index.html">
+        <button class="topleftbutton"><</button>
+    </a>
+    <h1>How To Play</h1>
+    <p>Guess the Wordle in 6 tries.<br><br>
+        Each guess must be a valid 5-letter word.<br><br>
+        The color of the tiles will change to show how close your guess was to the word.<br><br>
+        <b>Examples</b><br>
+        <div class="row">
+            <div class="tile correct" id="tile1-0">W</div>
+            <div class="tile" id="tile1-1">O</div>
+            <div class="tile" id="tile1-2">R</div>
+            <div class="tile" id="tile1-3">D</div>
+            <div class="tile" id="tile1-4">Y</div>
+        </div><br>
+        <b>W</b> is in the word and in the correct spot.<br><br>
+        <div class="row">
+            <div class="tile" id="tile1-0">L</div>
+            <div class="tile present" id="tile1-1">I</div>
+            <div class="tile" id="tile1-2">G</div>
+            <div class="tile" id="tile1-3">H</div>
+            <div class="tile" id="tile1-4">T</div>
+        </div><br>
+        <b>I</b> is in the word but in the wrong spot.<br><br>
+        <div class="row">
+            <div class="tile" id="tile1-0">R</div>
+            <div class="tile" id="tile1-1">O</div>
+            <div class="tile" id="tile1-2">G</div>
+            <div class="tile absent" id="tile1-3">U</div>
+            <div class="tile" id="tile1-4">E</div>
+        </div><br>
+        <b>U</b> is not in the word in any spot.
+    </p>
+</body>
+
+</html>
