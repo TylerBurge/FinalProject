@@ -69,11 +69,17 @@ body {
     top: 10px;
     left: 10px;
     text-align: center; 
-    /* border-radius: 25%;
+    border-radius: 25%;
     font-size: 1.75rem;
     width: 5vh;
     height: 5vh;
     border: 2px solid white;
     background-color: #c44949;
-    color: white;*/
+    color: white;
+}
+
+@media (max-width: 768px) {
+    .desktop-only {
+      display: none;
+    }
 }
