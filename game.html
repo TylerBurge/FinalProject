@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wordle (but not)</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <script src="script.js"></script>
+    <h1>Wordle (but not)</h1>
+    <div class="grid" style="margin-bottom: 20px;">
+        <div class="row">
+            <div class="tile" id="tile1-0"></div>
+            <div class="tile" id="tile1-1"></div>
+            <div class="tile" id="tile1-2"></div>
+            <div class="tile" id="tile1-3"></div>
+            <div class="tile" id="tile1-4"></div>
+        </div>
+        <div class="row">
+            <div class="tile" id="tile2-0"></div>
+            <div class="tile" id="tile2-1"></div>
+            <div class="tile" id="tile2-2"></div>
+            <div class="tile" id="tile2-3"></div>
+            <div class="tile" id="tile2-4"></div>
+        </div>
+        <div class="row">
+            <div class="tile" id="tile3-0"></div>
+            <div class="tile" id="tile3-1"></div>
+            <div class="tile" id="tile3-2"></div>
+            <div class="tile" id="tile3-3"></div>
+            <div class="tile" id="tile3-4"></div>
+        </div>
+        <div class="row">
+            <div class="tile" id="tile4-0"></div>
+            <div class="tile" id="tile4-1"></div>
+            <div class="tile" id="tile4-2"></div>
+            <div class="tile" id="tile4-3"></div>
+            <div class="tile" id="tile4-4"></div>
+        </div>
+        <div class="row">
+            <div class="tile" id="tile5-0"></div>
+            <div class="tile" id="tile5-1"></div>
+            <div class="tile" id="tile5-2"></div>
+            <div class="tile" id="tile5-3"></div>
+            <div class="tile" id="tile5-4"></div>
+        </div>
+        <div class="row">
+            <div class="tile" id="tile6-0"></div>
+            <div class="tile" id="tile6-1"></div>
+            <div class="tile" id="tile6-2"></div>
+            <div class="tile" id="tile6-3"></div>
+            <div class="tile" id="tile6-4"></div>
+        </div>
+    </div>
+    <input id="guess" type="text" maxlength="5" autocomplete="off" style="margin-bottom: 20px;" disabled >
+    <!-- <button onclick="submit()" style="margin-bottom: 20px;">Submit</button> -->
+    <div class="grid">
+        <div class="row">
+            <div class="keyboard" id="q">Q</div>
+            <div class="keyboard" id="w">W</div>
+            <div class="keyboard" id="e">E</div>
+            <div class="keyboard" id="r">R</div>
+            <div class="keyboard" id="t">T</div>
+            <div class="keyboard" id="y">Y</div>
+            <div class="keyboard" id="u">U</div>
+            <div class="keyboard" id="i">I</div>
+            <div class="keyboard" id="o">O</div>
+            <div class="keyboard" id="p">P</div>
+        </div>
+        <div class="row">
+            <div class="keyboard" id="a">A</div>
+            <div class="keyboard" id="s">S</div>
+            <div class="keyboard" id="d">D</div>
+            <div class="keyboard" id="f">F</div>
+            <div class="keyboard" id="g">G</div>
+            <div class="keyboard" id="h">H</div>
+            <div class="keyboard" id="j">J</div>
+            <div class="keyboard" id="k">K</div>
+            <div class="keyboard" id="l">L</div>
+        </div>
+        <div class="row">
+            <div class="keyboard" id="enter"style="width: 50px; font-size: 1rem">Enter</div>
+            <div class="keyboard" id="z">Z</div>
+            <div class="keyboard" id="x">X</div>
+            <div class="keyboard" id="c">C</div>
+            <div class="keyboard" id="v">V</div>
+            <div class="keyboard" id="b">B</div>
+            <div class="keyboard" id="n">N</div>
+            <div class="keyboard" id="m">M</div>
+            <div class="keyboard" id="del"style="width: 50px; font-size: 1rem">Del</div>
+            
+        </div>
+    </div>
+</body>
+
+</html>
