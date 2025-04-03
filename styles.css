@@ -94,3 +94,8 @@ body {
 .button:hover {
     background-color: #45a049;
 }  
+
+.popup {
+    margin: 50px;
+    visibility: hidden;
+}

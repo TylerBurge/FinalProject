@@ -46,7 +46,19 @@ function submit() {
         attempts += 1;
     }
     if (guess === word) {
-        //alert("You Win!")
+        const message = document.getElementById("win");
+        message.style.visibility = "visible";
+        message.textContent = "You won with "+(attempts-1)+" guesses!"
+        const playAgain = document.getElementById("playAgain");
+        playAgain.style.visibility = "visible";
+        window.scrollTo(0, document.body.scrollHeight);
+    } else if (attempts === 7) {
+        const message = document.getElementById("win");
+        message.style.visibility = "visible";
+        message.textContent = "The word was "+word+" :(";
+        const playAgain = document.getElementById("playAgain");
+        playAgain.style.visibility = "visible";
+        window.scrollTo(0, document.body.scrollHeight);
     }
 }
 
@@ -60,6 +72,8 @@ document.addEventListener("DOMContentLoaded", function () {
         someText.split(/\r?\n/).forEach(word => some_words.add(word.trim()));
         word = [...some_words][Math.floor(Math.random() * some_words.size)];
         console.log(word);
+        //temp
+        // word="angel";
     });
 });
 
